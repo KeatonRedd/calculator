@@ -59,7 +59,7 @@ for (let i = 0; i < buttons.length; i++) {
             else if (userInput == '.') {
                 //do nothing
             }
-            
+
             else {
                 calcDisplay.textContent = userInput;
             }
@@ -75,23 +75,15 @@ for (let i = 0; i < buttons.length; i++) {
         else if (!(OPERATORS.includes(calcDisplay.textContent[calcDisplay.textContent.length - 1]))) {
             if (userInput == '=') {
                 calcDisplay.textContent = operate(firstOperand.charAt(firstOperand.length - 1), firstOperand.slice(0, firstOperand.length - 1), calcDisplay.textContent.slice(firstOperand.length, calcDisplay.textContent.length));
-
             }
 
             else if (OPERATORS.includes(userInput)) {
                 if (firstOperand == 0) {
                     calcDisplay.textContent += userInput;
                     firstOperand = calcDisplay.textContent;
-                    console.log('loaded');
                 }
 
                 else {
-                    console.log(calcDisplay.textContent);
-                    console.log(calcDisplay.textContent.length);
-                    console.log(firstOperand);
-                    console.log(firstOperand.length);
-                    console.log('BREAK');
-
                     console.log(operate(firstOperand.charAt(firstOperand.length - 1), firstOperand.slice(0, firstOperand.length - 1), calcDisplay.textContent.slice(firstOperand.length, calcDisplay.textContent.length)));
 
                     if (firstOperand.charAt(firstOperand.length - 1) == '=') {
@@ -121,7 +113,5 @@ for (let i = 0; i < buttons.length; i++) {
                 calcDisplay.textContent += userInput;
             }
         }
-
-
     });
 }
