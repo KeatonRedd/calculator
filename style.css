@@ -6,4 +6,44 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: Helvetica, sans-serif;
+    background-color: gold;
+}
+
+button {
+    width: 125px;
+    height: 100px;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    border: 1px rgb(128, 128, 128) solid;
+}
+
+#display {
+    height: 100px;
+    background-color: lightblue;
+    width: 500px;
+    border: 3px black solid;
+    font-family: 'VT323', monospace;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calculator {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    border: 3px black solid;
+}
+
+.column {
+    display: flex;
+    width: 500px;
+    justify-content: flex-end;
 }
